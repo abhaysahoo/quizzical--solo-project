@@ -1,0 +1,179 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Karla", sans-serif;
+    background: #F5F7FB;
+    color: #293264;
+    user-select: none;
+}
+
+hr {
+    border: 0.79px solid #DBDEF0;
+}
+
+/* styling for Welcome component */
+.welcome-component,
+.error-component {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+    padding: 1em;    
+}
+
+.quiz-name {
+    margin: 0;
+}
+
+.quiz-description {
+    margin: 1.5em 0;
+}
+
+.start-button {
+    background: #4D5B9E;
+    color: #F5F7FB;
+    border: none;
+    font-weight: 500;
+    font-family: "Inter", sans-serif;
+    border-radius: 15px;
+    padding: 1em 4em;
+    line-height: 1.25;
+    cursor: pointer;
+    text-transform: capitalize;
+}
+
+/* styling for loader element */
+.quiz-loader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* styling for Error component */
+.error-text {
+    text-align: center;
+    font-size: 1.2rem;
+    margin-bottom: 1em;
+}
+
+/* styling for Quiz component */
+.quiz-component {
+    padding: 3em 2em;
+}
+
+.check-result {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1em;
+    margin-top: 1.5em;
+}
+
+.quiz-btn {
+    border: none;
+    background: #4D5B9E;
+    color: #F5F7FB;
+    font-size: 0.64rem;
+    line-height: 1.21;
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+    padding: 1em 3em;
+    border-radius: 10px;
+    text-align: center;
+    cursor: pointer;
+    text-transform: capitalize;
+}
+
+.quiz-scoreline {
+    font-weight: 700;
+    font-family: "Inter", sans-serif;
+    align-self: center;
+    font-size: 0.8rem;
+    line-height: 1.21;
+}
+
+/* styling for Question component */
+.question-component {
+    margin: auto;
+    width: 80%;
+    max-width: 1000px;
+}
+
+.prompt {
+    font-weight: 700;
+    line-height: 1.16em;
+    margin-top: 1.5em;
+}
+
+.options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5em;
+    margin: 0.7em 0 1em 0;
+}
+
+.option {
+    border: 0.79px solid #4D5B9E;
+    border-radius: 7.94px; 
+    font-weight: 500;
+    font-size: 0.64rem;
+    font-family: "Inter", sans-serif;
+    line-height: 1.21;
+    padding: 0.5em 2em;
+    cursor: pointer;
+    display: flex;
+    flex-grow: 1;
+    justify-content: center;
+    align-items: center;
+}
+
+.option:hover,
+.selected-option {
+    background-color: #D6DBF5;
+    border: none;
+}
+
+.option-disabled {
+    pointer-events: none;
+    cursor: none;
+    opacity: 50%;
+}
+
+.correct-option {
+    background: #94D7A2;
+}
+
+.incorrect-option {
+    background: #F8BCBC;
+}
+
+
+/* media queries for managing font-sizes for different devices */
+@media(min-width:576px) and (max-width: 767px) {
+    html {
+        font-size: 18px;
+    }
+}
+
+@media(min-width:768px) and (max-width: 991px) {
+    html {
+        font-size: 20px;
+    }
+}
+
+@media(min-width:992px) and (max-width: 1199px) {
+    html {
+        font-size: 22px;
+    }
+}
+
+@media(min-width:1200px) {
+    html {
+        font-size: 24px;
+    }
+}
